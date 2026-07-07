@@ -1,216 +1,530 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#7b2aa3" />
-  <meta name="description" content="Lana Al-Asfar Beauty & Skin Care - خدمات عناية بالبشرة والتجميل والحجز في الزرقاء، الأردن." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>لنا الأصفر | Lana Al-Asfar Beauty & Skin Care</title>
+  <meta name="description" content="لنا الأصفر للعناية بالبشرة والجمال في الرصيفة والزرقاء: ليزر، هايدرافيشيال، مكياج عرايس، شعر، أظافر، وعروض خاصة مع حجز عبر واتساب." />
+  <meta name="keywords" content="لنا الأصفر, صالون, عناية بالبشرة, ليزر, هايدرافيشيال, مكياج عرايس, الرصيفة, الزرقاء" />
+
+  <meta property="og:title" content="لنا الأصفر | Lana Al-Asfar Beauty & Skin Care" />
+  <meta property="og:description" content="خدمات جمال وعناية بالبشرة، ليزر، مكياج عرايس، شعر وأظافر مع عروض خاصة وحجز سريع." />
+  <meta property="og:image" content="assets/background.webp" />
+  <meta property="og:type" content="website" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&family=Cairo:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --deep:#4e0b68; --violet:#7b2aa3; --purple:#9746bd; --lav:#efe3ff; --pale:#fbf8ff; --gold:#d9b55f; --ink:#2f2038; --muted:#75687d; --white:#fff;
-      --shadow:0 18px 55px rgba(70,13,96,.16); --soft-shadow:0 10px 30px rgba(83,22,112,.12); --radius:26px;
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Cairo',system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff 0%,#fbf6ff 38%,#f7efff 100%);overflow-x:hidden;}
-    a{color:inherit;text-decoration:none} img{max-width:100%;display:block} button,input,select,textarea{font:inherit}
-    .page-bg{position:fixed;inset:0;z-index:-3;background:url('assets/background.webp') top center/cover no-repeat;opacity:.18;filter:saturate(1.05)}
-    .ornament{position:fixed;inset:auto -18vw -35vw auto;width:72vw;height:72vw;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(187,112,221,.38),rgba(84,11,104,.08) 42%,rgba(255,255,255,0) 68%);z-index:-2;pointer-events:none}
-    .container{width:min(1180px,calc(100% - 32px));margin-inline:auto}.section{padding:74px 0}.section-title{text-align:center;margin:0 0 34px}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--violet);font-weight:800;letter-spacing:.01em;margin:0 0 10px}.eyebrow:before,.eyebrow:after{content:'';width:30px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}.section-title h2{margin:0;font-size:clamp(28px,4vw,45px);color:var(--deep);line-height:1.25}.section-title p{margin:10px auto 0;max-width:720px;color:var(--muted);font-size:16px;line-height:1.9}.script{font-family:'Aref Ruqaa Ink','Cairo',serif;font-weight:700;color:var(--violet);text-shadow:0 7px 28px rgba(123,42,163,.18)}
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Playfair+Display:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(137,75,164,.14)}
-    .topbar:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(126,42,163,.10),rgba(255,255,255,0),rgba(222,184,92,.10));pointer-events:none}.nav{position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0}.brand{display:flex;align-items:center;gap:12px;min-width:max-content}.brand-logo{width:58px;height:58px;border-radius:999px;box-shadow:0 10px 28px rgba(123,42,163,.18)}.brand-text strong{display:block;font-size:23px;color:var(--deep);font-weight:900;line-height:1.05}.brand-text small{display:block;font-family:'Playfair Display',serif;font-size:13px;color:#5e416c;direction:ltr;text-align:right;margin-top:4px}.nav-links{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}.nav-links a,.lang-pill{padding:10px 13px;border-radius:999px;color:#604868;font-weight:800;font-size:14px;line-height:1.2}.nav-links a:hover,.nav-links a.active{background:rgba(148,72,188,.12);color:var(--violet)}.nav-links span{display:block;font-size:10px;font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.03em;color:#8a7196;direction:ltr}.lang-pill{border:1px solid rgba(123,42,163,.20);background:#fff;color:var(--violet);display:flex;gap:6px}.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg,var(--violet),#5a1376);color:white;font-weight:900;box-shadow:0 12px 28px rgba(123,42,163,.26);white-space:nowrap}
-
-    .hero{position:relative;min-height:720px;display:flex;align-items:center;overflow:hidden;background:url('assets/background.webp') center/cover no-repeat}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.72) 0%,rgba(255,255,255,.92) 42%,rgba(255,255,255,.78) 100%)}.hero:after{content:'';position:absolute;inset:auto -10% -130px -10%;height:230px;background:#fff;border-radius:50% 50% 0 0/55% 55% 0 0;box-shadow:0 -30px 55px rgba(99,22,126,.10)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.05fr;gap:46px;align-items:center;padding:80px 0 115px}.hero-copy{max-width:620px}.hero-copy .eyebrow{font-size:15px}.hero h1{margin:0;color:#4d3e58;font-weight:900;line-height:1.25;font-size:clamp(42px,6vw,80px)}.hero h1 .script{display:block;font-size:1.22em;line-height:.95;color:var(--violet)}.hero .en-title{font-family:'Playfair Display',serif;direction:ltr;text-align:right;color:#644173;font-size:clamp(20px,2.8vw,32px);margin:16px 0 0}.hero p.lead{font-size:19px;line-height:1.95;color:#5c4d66;margin:20px 0 28px;max-width:580px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap}.btn{border:0;border-radius:999px;padding:14px 22px;font-weight:900;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s ease}.btn-primary{background:linear-gradient(135deg,#9b47bd,#5b1477);color:white;box-shadow:0 15px 30px rgba(123,42,163,.28)}.btn-light{background:rgba(255,255,255,.75);border:1px solid rgba(123,42,163,.20);color:var(--violet);box-shadow:var(--soft-shadow)}.btn:hover{transform:translateY(-2px)}.hero-visual{position:relative;min-height:430px}.hero-card{position:absolute;inset:0;border-radius:42px;overflow:hidden;background:rgba(255,255,255,.35);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.75);transform:rotate(-2deg)}.hero-card img{width:100%;height:100%;object-fit:cover;object-position:center}.hero-card:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(123,42,163,.12));}.floating-badge{position:absolute;right:-18px;bottom:24px;z-index:2;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border:1px solid rgba(123,42,163,.15);border-radius:24px;padding:16px 18px;box-shadow:var(--soft-shadow);max-width:250px}.floating-badge strong{display:block;color:var(--deep);font-size:17px}.floating-badge small{display:block;color:var(--muted);line-height:1.7}.bubble{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.9),rgba(151,70,189,.18));box-shadow:0 10px 30px rgba(151,70,189,.16)}.b1{width:86px;height:86px;left:8%;top:8%}.b2{width:42px;height:42px;right:16%;top:18%}.b3{width:58px;height:58px;left:2%;bottom:18%}
-
-    .services-wrap{position:relative;background:#fff;border-radius:54px 54px 0 0;margin-top:-58px;z-index:2;padding-top:35px}.services{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.service-card{position:relative;background:rgba(255,255,255,.92);border:1px solid rgba(123,42,163,.13);border-radius:25px;overflow:hidden;box-shadow:var(--soft-shadow);transition:.22s ease}.service-card:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(94,17,125,.16)}.service-card .img{height:190px;overflow:hidden;background:var(--lav)}.service-card img{width:100%;height:100%;object-fit:cover;transition:.35s}.service-card:hover img{transform:scale(1.06)}.service-body{padding:18px 18px 20px}.service-icon{position:absolute;top:164px;left:18px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:white;border:1px solid rgba(123,42,163,.16);box-shadow:0 10px 28px rgba(79,11,106,.14);font-size:24px;color:var(--violet)}.service-card h3{margin:0 0 6px;color:var(--deep);font-size:20px}.service-card .en{display:block;direction:ltr;text-align:right;font-family:'Playfair Display',serif;color:#8a5aa0;font-size:13px;margin-bottom:8px}.service-card p{margin:0;color:var(--muted);line-height:1.8;font-size:14px}.card-cta{margin-top:14px;padding:10px 13px;border-radius:999px;background:rgba(123,42,163,.08);color:var(--violet);font-weight:900;font-size:13px;display:inline-flex;gap:6px}
-
-    .feature{position:relative;overflow:hidden;border-radius:42px;padding:44px;background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(239,226,255,.85));border:1px solid rgba(123,42,163,.12);box-shadow:var(--shadow)}.feature:before{content:'';position:absolute;inset:0;background:url('assets/background.webp') center/cover no-repeat;opacity:.25}.feature-grid{position:relative;display:grid;grid-template-columns:.95fr 1.05fr;gap:38px;align-items:center}.feature-media{position:relative;min-height:390px}.device-card{position:absolute;inset:30px auto 0 0;width:78%;border-radius:32px;background:white;padding:14px;box-shadow:var(--shadow);overflow:hidden}.device-card img{width:100%;height:320px;object-fit:cover;border-radius:24px}.round-photo{position:absolute;right:0;top:12px;width:210px;height:210px;border-radius:50%;padding:8px;background:white;box-shadow:0 18px 45px rgba(123,42,163,.18)}.round-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%}.feature-copy h2{font-size:clamp(38px,6vw,72px);margin:0;color:var(--violet);font-family:'Aref Ruqaa Ink','Cairo',serif;line-height:1}.feature-copy .en-big{font-family:'Playfair Display',serif;direction:ltr;color:#5f3a6d;font-size:25px;margin:8px 0 12px}.feature-copy p{color:#5f5168;line-height:1.95;font-size:17px}.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.benefit{background:rgba(255,255,255,.70);border:1px solid rgba(123,42,163,.12);border-radius:18px;padding:14px;text-align:center}.benefit strong{display:block;color:var(--deep)}.benefit small{display:block;color:var(--muted);direction:ltr;font-family:'Playfair Display',serif;margin-top:3px}
-
-    .booking{background:linear-gradient(135deg,#5e1678,#8b37b0 52%,#3d0b59);border-radius:42px;padding:34px;box-shadow:0 26px 58px rgba(78,11,104,.24);color:white;position:relative;overflow:hidden}.booking:before{content:'';position:absolute;inset:-30% auto auto -10%;width:420px;height:420px;background:radial-gradient(circle,rgba(255,255,255,.20),transparent 65%);border-radius:50%}.booking-head{position:relative;text-align:center;margin-bottom:22px}.booking-head h2{font-size:clamp(28px,4vw,45px);margin:0}.booking-head p{margin:8px auto 0;opacity:.86;max-width:720px}.form{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;direction:rtl}.field{display:flex;flex-direction:column;gap:7px}.field label{font-weight:800;font-size:13px;opacity:.94}.field input,.field select,.field textarea{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.92);color:#34223d;border-radius:17px;padding:13px 14px;outline:none}.field textarea{min-height:92px;resize:vertical}.full{grid-column:span 2}.submit-field{align-self:end}.submit-field .btn{width:100%;height:50px;background:white;color:var(--violet)}.notice{position:relative;display:none;margin-top:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:14px;line-height:1.8}.notice.show{display:block}
-
-    .contact-strip{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px}.contact-card{background:rgba(255,255,255,.82);border:1px solid rgba(123,42,163,.12);border-radius:26px;padding:22px;box-shadow:var(--soft-shadow)}.contact-card strong{display:block;color:var(--deep);font-size:18px}.contact-card p{margin:8px 0 0;color:var(--muted);line-height:1.8}.contact-card a{color:var(--violet);font-weight:900;direction:ltr;display:inline-block}.footer{background:#3e0c55;color:white;padding:32px 0;margin-top:60px;position:relative;overflow:hidden}.footer:before{content:'';position:absolute;inset:0;background:url('assets/background.webp') center/cover no-repeat;opacity:.18}.footer-grid{position:relative;display:flex;justify-content:space-between;gap:24px;align-items:center}.footer small{opacity:.82}.socials{display:flex;gap:10px;flex-wrap:wrap}.socials a{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:9px 12px;color:white;font-weight:800}.whatsapp-float{position:fixed;left:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 16px 40px rgba(37,211,102,.35);font-size:31px;border:4px solid #fff}.admin-link{opacity:.7}
-
-    .admin-panel{display:none;margin-top:22px;background:white;color:var(--ink);border-radius:24px;padding:20px}.admin-panel.show{display:block}.booking-row{padding:13px;border:1px solid rgba(123,42,163,.12);border-radius:16px;margin:10px 0;background:#fbf8ff}.booking-row strong{color:var(--deep)}.mini-admin{margin-top:24px;background:rgba(255,255,255,.10);border-radius:20px;padding:16px;position:relative}.mini-admin input{border-radius:14px;border:0;padding:12px;min-width:220px}.mini-admin button{margin-inline-start:8px;border:0;border-radius:14px;padding:12px 16px;background:#fff;color:var(--violet);font-weight:900}
-
-    @media (max-width:1020px){.hero-grid,.feature-grid{grid-template-columns:1fr}.hero{min-height:auto}.hero-visual{min-height:410px}.services{grid-template-columns:repeat(2,1fr)}.form{grid-template-columns:repeat(2,1fr)}.submit-field{grid-column:span 2}.contact-strip{grid-template-columns:1fr}.nav{align-items:flex-start}.nav-links{display:none}.nav-cta{padding:11px 14px}.brand-logo{width:52px;height:52px}.hero-copy{text-align:center;margin:auto}.hero .en-title{text-align:center}.hero-actions{justify-content:center}.hero-copy .eyebrow{justify-content:center}.feature-copy{text-align:center}.benefits{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:640px){.container{width:min(100% - 22px,1180px)}.topbar{position:relative}.brand-text strong{font-size:19px}.brand-text small{font-size:11px}.nav-cta{font-size:13px;padding:10px 12px}.hero-grid{padding:46px 0 95px;gap:22px}.hero h1{font-size:39px}.hero p.lead{font-size:16px}.hero-visual{min-height:330px}.floating-badge{right:10px;left:10px;bottom:-8px;max-width:none}.services-wrap{border-radius:38px 38px 0 0}.services{grid-template-columns:1fr}.service-card .img{height:215px}.feature{padding:24px;border-radius:30px}.feature-media{min-height:300px}.device-card{width:86%;inset:65px auto 0 0}.device-card img{height:220px}.round-photo{width:150px;height:150px}.benefits{grid-template-columns:1fr}.form{grid-template-columns:1fr}.full,.submit-field{grid-column:auto}.footer-grid{display:block;text-align:center}.socials{justify-content:center;margin-top:14px}.section{padding:54px 0}}
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <div class="page-bg"></div><div class="ornament"></div>
-  <header class="topbar" id="top">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Lana Al-Asfar home">
-        <img src="assets/logo.svg" class="brand-logo" alt="Lana Al-Asfar logo">
-        <span class="brand-text"><strong>لنا الأصفر</strong><small>Lana Al-Asfar Beauty & Skin Care</small></span>
+  <header class="site-header">
+    <nav class="navbar">
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
+
+      <a href="#home" class="brand" data-view-link="home" aria-label="العودة للرئيسية">
+        <img src="assets/logo.svg" alt="Lana Al-Asfar Logo" class="brand-logo" />
+        <span>
+          <strong>لنا الأصفر</strong>
+          <small>Lana Al-Asfar Beauty & Skin Care</small>
+        </span>
       </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a class="active" href="#top">الرئيسية<span>Home</span></a>
-        <a href="#services">الخدمات<span>Services</span></a>
-        <a href="#hydra">هيدرافيشل<span>HydraFacial</span></a>
-        <a href="#booking">الحجز<span>Booking</span></a>
-        <a href="#contact">تواصل<span>Contact</span></a>
-        <span class="lang-pill">AR <b>|</b> EN</span>
-      </nav>
-      <a class="nav-cta" href="#booking">احجزي الآن <span>Book</span></a>
-    </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home" data-view-link="home">الرئيسية <small>Home</small></a>
+        <a href="#services" data-view-link="services">الخدمات <small>Services</small></a>
+        <a href="#offers" data-view-link="offers">العروض <small>Offers</small></a>
+        <a href="#gallery" data-view-link="gallery">المعرض <small>Gallery</small></a>
+        <a href="#booking" data-view-link="booking" class="nav-cta">احجزي الآن</a>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">الزرقاء، الأردن · Zarqa, Jordan</p>
-          <h1>الجمال يبدأ من <span class="script">العناية</span> الصحيحة</h1>
-          <div class="en-title">Healthy beauty starts with professional care</div>
-          <p class="lead">عناية متكاملة لبشرتك، شعرك، وأظافرك بخدمات تجميلية منظمة وحجز مباشر عبر واتساب. نعرض الأسعار والتفاصيل بعد التواصل حسب الخدمة والحالة.</p>
+    <!-- HOME -->
+    <section class="view active" id="home">
+      <div class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content reveal">
+          <p class="eyebrow">Lana Al-Asfar Beauty & Skin Care</p>
+          <h1>
+            لنا الأصفر
+            <span>عنوان الجمال والثقة</span>
+          </h1>
+          <h2>Beauty begins with the right care</h2>
+          <p class="hero-text">
+            خدمات متكاملة للعناية بالبشرة، الليزر، المكياج، الشعر والأظافر،
+            مع عروض مميزة وحجز سريع عبر واتساب.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#booking">احجزي موعدك الآن · Book Now</a>
-            <a class="btn btn-light" href="#services">استعرضي الخدمات · View Services</a>
+            <button class="btn primary" data-view-button="booking">احجزي موعدك الآن</button>
+            <button class="btn ghost" data-view-button="offers">شاهدي العروض</button>
           </div>
         </div>
-        <div class="hero-visual" aria-label="Beauty treatment visual">
-          <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span>
-          <div class="hero-card"><img src="assets/hydrafacial.webp" alt="HydraFacial skin care machine and beauty model"></div>
-          <div class="floating-badge"><strong>حجز مباشر عبر واتساب</strong><small>Direct WhatsApp booking<br><b dir="ltr">+962 7 9287 7358</b></small></div>
-        </div>
       </div>
-    </section>
 
-    <div class="services-wrap">
-      <section class="section" id="services">
-        <div class="container">
-          <div class="section-title"><p class="eyebrow">Our Featured Services</p><h2>خدماتنا المميزة</h2><p>كل خدمة يمكن حجزها مباشرة، والسعر النهائي يتم تأكيده بعد التواصل حسب التفاصيل المطلوبة.</p></div>
-          <div class="services" id="servicesGrid"></div>
+      <section class="quick-section reveal">
+        <div class="section-title">
+          <p>Our Featured Services</p>
+          <h2>خدماتنا المميزة</h2>
+        </div>
+
+        <div class="icon-services">
+          <button data-view-button="offer-laser">
+            <span>✦</span>
+            الليزر
+            <small>Laser</small>
+          </button>
+          <button data-view-button="services">
+            <span>◌</span>
+            العناية بالبشرة
+            <small>Skin Care</small>
+          </button>
+          <button data-view-button="offer-bridal">
+            <span>♕</span>
+            العرائس
+            <small>Bridal</small>
+          </button>
+          <button data-view-button="services">
+            <span>✂</span>
+            الشعر
+            <small>Hair</small>
+          </button>
+          <button data-view-button="services">
+            <span>❦</span>
+            الأظافر
+            <small>Nails</small>
+          </button>
         </div>
       </section>
-    </div>
 
-    <section class="section" id="hydra">
-      <div class="container">
-        <div class="feature">
-          <div class="feature-grid">
-            <div class="feature-media">
-              <div class="device-card"><img src="assets/hydrafacial-device.webp" alt="HydraFacial device benefits"></div>
-              <div class="round-photo"><img src="assets/facial-treatment.webp" alt="Facial skin care treatment"></div>
+      <section class="offers-preview reveal">
+        <div class="section-title">
+          <p>Limited Time Offers</p>
+          <h2>العروض المميزة</h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <img src="assets/laser.webp" alt="عروض الليزر" />
+            <div>
+              <h3>عروض الليزر المميزة</h3>
+              <p>جلسات ليزر مريحة بأجهزة حديثة مع متابعة حسب احتياج كل حالة.</p>
+              <button class="text-btn" data-view-button="offer-laser">عرض التفاصيل</button>
             </div>
-            <div class="feature-copy">
-              <p class="eyebrow">Advanced Skin Care</p>
-              <h2>هيدرافيشل</h2>
-              <div class="en-big">HydraFacial & Deep Cleansing</div>
-              <p>تنظيف وترطيب وتجديد مظهر البشرة بطريقة لطيفة ومنظمة. لا نعد بنتائج مضمونة؛ يتم اختيار المناسب بعد تقييم البشرة والتواصل.</p>
-              <div class="benefits">
-                <div class="benefit"><strong>تنظيف عميق</strong><small>Deep cleansing</small></div>
-                <div class="benefit"><strong>ترطيب ونضارة</strong><small>Hydration & glow</small></div>
-                <div class="benefit"><strong>تقييم حسب البشرة</strong><small>Personalized care</small></div>
-              </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/facial-care.webp" alt="مكياج عرايس" />
+            <div>
+              <h3>مكياج عرايس</h3>
+              <p>إطلالة عروس أنيقة بتفاصيل ناعمة وثبات مناسب للحفل والتصوير.</p>
+              <button class="text-btn" data-view-button="offer-bridal">عرض التفاصيل</button>
             </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/glow-session.webp" alt="جوائز وعروض" />
+            <div>
+              <h3>جوائز وعروض خاصة</h3>
+              <p>عروض وجوائز تُعلن بشفافية مع خدمات عناية وتجميل مميزة.</p>
+              <button class="text-btn" data-view-button="offer-prizes">عرض التفاصيل</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="trust-strip reveal">
+        <div><strong>تواصل مباشر</strong><span>Direct Contact</span></div>
+        <div><strong>أجهزة حديثة</strong><span>Modern Devices</span></div>
+        <div><strong>حجز سهل</strong><span>Easy Booking</span></div>
+        <div><strong>عناية بالتفاصيل</strong><span>Premium Care</span></div>
+      </section>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="view" id="services">
+      <div class="page-hero small">
+        <p>Services</p>
+        <h2>خدمات لنا الأصفر</h2>
+        <span>اختاري الخدمة المناسبة، وتواصلي معنا لتأكيد التفاصيل والموعد.</span>
+      </div>
+
+      <section class="content-wrap">
+        <div class="cards-grid service-grid">
+          <article class="card">
+            <img src="assets/hydrafacial.webp" alt="هايدرافيشيال وتنظيف عميق" />
+            <div>
+              <h3>هايدرافيشيال وتنظيف عميق</h3>
+              <p>تنظيف وترطيب يساعد على تحسين مظهر البشرة ومنحها نضارة أوضح.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/laser.webp" alt="إزالة الشعر بالليزر" />
+            <div>
+              <h3>إزالة الشعر بالليزر</h3>
+              <p>جلسات مريحة لمناطق مختلفة من الجسم حسب نوع البشرة والشعر.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/facial-treatment.webp" alt="جلسات العناية بالبشرة" />
+            <div>
+              <h3>جلسات العناية بالبشرة</h3>
+              <p>خدمات نضارة وتفتيح ومتابعة تناسب احتياج كل بشرة.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/manicure.webp" alt="مانيكير" />
+            <div>
+              <h3>مانيكير ولون لليد</h3>
+              <p>عناية أنيقة بالأظافر مع ألوان ناعمة ومرتبة.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/pedicure.webp" alt="بديكير" />
+            <div>
+              <h3>بديكير وعناية بالأقدام</h3>
+              <p>نعومة وترتيب للأقدام ضمن تجربة مريحة.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/hair-styling.webp" alt="استشوار شعر" />
+            <div>
+              <h3>شعر واستشوار</h3>
+              <p>تجهيز شعر للمناسبات وقص أطراف للحفاظ على المظهر الصحي.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="page-nav">
+          <button data-view-button="home">العودة للرئيسية</button>
+          <button data-view-button="offers">التالي: العروض</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- OFFERS LIST -->
+    <section class="view" id="offers">
+      <div class="page-hero small">
+        <p>Special Offers</p>
+        <h2>العروض الخاصة</h2>
+        <span>عروض مختارة لفترة محدودة. الحجز يتم تأكيده بعد التواصل.</span>
+      </div>
+
+      <section class="content-wrap">
+        <div class="cards-grid">
+          <article class="offer-card">
+            <img src="assets/laser.webp" alt="عرض الليزر" />
+            <div>
+              <h3>عروض الليزر المميزة</h3>
+              <p>تخلّصي من عناء الطرق التقليدية، واستمتعي بتجربة ليزر مريحة تساعدك على الحصول على بشرة أكثر نعومة وترتيبًا.</p>
+              <button class="btn small" data-view-button="offer-laser">تفاصيل العرض</button>
+            </div>
+          </article>
+
+          <article class="offer-card">
+            <img src="assets/facial-care.webp" alt="عرض العروس" />
+            <div>
+              <h3>عرض العروس ومكياج العرايس</h3>
+              <p>الصالون عليكِ والبدلة علينا. تألقي في يوم عرسك بعرض خاص بسعر 200 فقط حتى 15/7.</p>
+              <button class="btn small" data-view-button="offer-bridal">تفاصيل العرض</button>
+            </div>
+          </article>
+
+          <article class="offer-card">
+            <img src="assets/glow-session.webp" alt="جوائز وعروض خاصة" />
+            <div>
+              <h3>جوائز حقيقية وعروض مميزة</h3>
+              <p>احجزي الآن وادخلي فرصة الاستفادة من عروضنا وجوائزنا الخاصة بكل شفافية.</p>
+              <button class="btn small" data-view-button="offer-prizes">تفاصيل العرض</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="page-nav">
+          <button data-view-button="services">السابق: الخدمات</button>
+          <button data-view-button="home">العودة للرئيسية</button>
+          <button data-view-button="gallery">التالي: المعرض</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- LASER OFFER -->
+    <section class="view" id="offer-laser">
+      <div class="detail-page">
+        <img src="assets/laser.webp" alt="عروض الليزر" class="detail-image" />
+        <div class="detail-content">
+          <p class="eyebrow">Laser Offer</p>
+          <h2>عروض الليزر المميزة في لنا الأصفر</h2>
+          <p>
+            تخلّصي من عناء الشعر الزائد، واستمتعي بجلسات ليزر مريحة بأجهزة حديثة
+            تساعدك على الحصول على بشرة أكثر نعومة وترتيبًا.
+          </p>
+
+          <ul class="check-list">
+            <li>جلسات مريحة وسريعة.</li>
+            <li>مناسبة لمناطق مختلفة من الجسم.</li>
+            <li>متابعة حسب نوع البشرة والشعر.</li>
+            <li>بإشراف فريق مختص.</li>
+          </ul>
+
+          <div class="notice">
+            تختلف النتائج من شخص لآخر حسب نوع البشرة والشعر وعدد الجلسات المطلوبة.
+          </div>
+
+          <button class="btn primary" data-book-service="عرض الليزر">احجزي عرض الليزر</button>
+
+          <div class="page-nav">
+            <button data-view-button="offers">السابق: العروض</button>
+            <button data-view-button="home">العودة للرئيسية</button>
+            <button data-view-button="offer-bridal">التالي: عرض العروس</button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="booking">
-      <div class="container">
-        <div class="booking">
-          <div class="booking-head"><h2>احجزي موعدك الآن</h2><p>Book your appointment — سيتم التواصل معك لتأكيد الموعد والتفاصيل.</p></div>
-          <form class="form" id="bookingForm">
-            <div class="field"><label for="name">الاسم الكامل · Full name</label><input id="name" name="name" required placeholder="اكتبي الاسم"></div>
-            <div class="field"><label for="phone">رقم الهاتف · Phone</label><input id="phone" name="phone" required inputmode="tel" placeholder="07XXXXXXXX"></div>
-            <div class="field"><label for="service">الخدمة · Service</label><select id="service" name="service" required></select></div>
-            <div class="field"><label for="date">التاريخ · Date</label><input id="date" name="date" type="date" required></div>
-            <div class="field"><label for="time">الوقت · Time</label><input id="time" name="time" type="time" required></div>
-            <div class="field full"><label for="notes">ملاحظات · Notes</label><textarea id="notes" name="notes" placeholder="أي تفاصيل إضافية"></textarea></div>
-            <div class="field"><label for="contactMethod">طريقة التواصل · Contact</label><select id="contactMethod" name="contactMethod"><option>واتساب WhatsApp</option><option>اتصال Call</option><option>رسالة Message</option></select></div>
-            <div class="field submit-field"><label>&nbsp;</label><button class="btn" type="submit">إرسال الحجز · Submit</button></div>
-          </form>
-          <div id="bookingNotice" class="notice"></div>
-          <div class="mini-admin">
-            <strong>Admin</strong> <small>عرض الحجوزات المحلية على هذا الجهاز فقط.</small><br><br>
-            <input id="adminPassword" type="password" placeholder="admin password"><button type="button" id="adminBtn">دخول</button>
-            <div id="adminPanel" class="admin-panel"></div>
+    <!-- BRIDAL OFFER -->
+    <section class="view" id="offer-bridal">
+      <div class="detail-page">
+        <img src="assets/facial-care.webp" alt="مكياج عرايس" class="detail-image" />
+        <div class="detail-content">
+          <p class="eyebrow">Bridal Makeup</p>
+          <h2>مكياج عرايس عند لنا الأصفر</h2>
+          <p>
+            لأن يوم زفافك لا يتكرر، نمنحك إطلالة ناعمة، راقية، ومناسبة للحفل والتصوير.
+          </p>
+
+          <div class="price-box">
+            <strong>الصالون عليكِ… والبدلة علينا</strong>
+            <span>عرض خاص بسعر 200 فقط — ساري حتى 15/7</span>
+          </div>
+
+          <ul class="check-list">
+            <li>مكياج عروس احترافي بأسلوب أنيق.</li>
+            <li>ثبات مناسب لفترة الحفل.</li>
+            <li>لمسة ناعمة تبرز جمالك الطبيعي.</li>
+            <li>إطلالة مناسبة للصور والفيديو.</li>
+          </ul>
+
+          <div class="notice">
+            تفاصيل الباقة وتوفر البدلة يتم تأكيدها عند التواصل.
+          </div>
+
+          <button class="btn primary" data-book-service="مكياج عروس / عرض العروس">احجزي عرض العروس</button>
+
+          <div class="page-nav">
+            <button data-view-button="offer-laser">السابق: الليزر</button>
+            <button data-view-button="home">العودة للرئيسية</button>
+            <button data-view-button="offer-prizes">التالي: الجوائز</button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-title"><p class="eyebrow">Contact</p><h2>تواصلي معنا</h2></div>
-        <div class="contact-strip">
-          <div class="contact-card"><strong>واتساب الحجز · WhatsApp Booking</strong><p><a href="https://wa.me/962792877358" target="_blank" rel="noreferrer">+962 7 9287 7358</a></p></div>
-          <div class="contact-card"><strong>الموقع · Location</strong><p>الزرقاء، الأردن<br><span dir="ltr">Zarqa, Jordan</span></p></div>
-          <div class="contact-card"><strong>Social</strong><p><a href="https://www.instagram.com/lanaalasfar7/" target="_blank" rel="noreferrer">Instagram: @lanaalasfar7</a><br><a href="https://www.facebook.com/profile.php?id=100063583898506" target="_blank" rel="noreferrer">Facebook Page</a></p></div>
+    <!-- PRIZES OFFER -->
+    <section class="view" id="offer-prizes">
+      <div class="detail-page">
+        <img src="assets/glow-session.webp" alt="جوائز لنا الأصفر" class="detail-image" />
+        <div class="detail-content">
+          <p class="eyebrow">Real Prizes & Special Offers</p>
+          <h2>جوائز حقيقية وعروض مميزة</h2>
+          <p>
+            في لنا الأصفر نحرص أن تكون تجربتك واضحة ومميزة، من جودة الخدمة إلى شفافية العروض والجوائز.
+          </p>
+
+          <ul class="check-list">
+            <li>جوائز تُعلن وتُسلّم بشفافية.</li>
+            <li>عروض واضحة لفترة محدودة.</li>
+            <li>خدمات متنوعة للبشرة والجمال.</li>
+            <li>تأكيد الموعد بعد التواصل.</li>
+          </ul>
+
+          <div class="notice">
+            تُنفذ الجلسات بعناية وبما يناسب كل حالة، مع توضيح التفاصيل قبل تأكيد الحجز.
+          </div>
+
+          <button class="btn primary" data-book-service="العروض والجوائز">احجزي الآن</button>
+
+          <div class="page-nav">
+            <button data-view-button="offer-bridal">السابق: العروس</button>
+            <button data-view-button="home">العودة للرئيسية</button>
+            <button data-view-button="booking">التالي: الحجز</button>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="view" id="gallery">
+      <div class="page-hero small">
+        <p>Gallery</p>
+        <h2>معرض الصور</h2>
+        <span>اضغطي على أي صورة لعرضها بحجم أكبر.</span>
+      </div>
+
+      <section class="content-wrap">
+        <div class="gallery-grid">
+          <img src="assets/hydrafacial.webp" alt="هايدرافيشيال" class="gallery-img" />
+          <img src="assets/hydrafacial-device.webp" alt="جهاز هايدرافيشيال" class="gallery-img" />
+          <img src="assets/facial-treatment.webp" alt="جلسة عناية بالبشرة" class="gallery-img" />
+          <img src="assets/laser.webp" alt="جلسة ليزر" class="gallery-img" />
+          <img src="assets/manicure.webp" alt="مانيكير" class="gallery-img" />
+          <img src="assets/pedicure.webp" alt="بديكير" class="gallery-img" />
+          <img src="assets/nail-color.webp" alt="لون لليد" class="gallery-img" />
+          <img src="assets/hair-styling.webp" alt="استشوار شعر" class="gallery-img" />
+          <img src="assets/hair-trim.webp" alt="قص أطراف" class="gallery-img" />
+        </div>
+
+        <div class="page-nav">
+          <button data-view-button="offers">السابق: العروض</button>
+          <button data-view-button="home">العودة للرئيسية</button>
+          <button data-view-button="booking">التالي: الحجز</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="view" id="booking">
+      <div class="page-hero small">
+        <p>Book Your Appointment</p>
+        <h2>احجزي موعدك</h2>
+        <span>املئي البيانات وسيتم إرسال الطلب مباشرة عبر واتساب لتأكيد الموعد.</span>
+      </div>
+
+      <section class="booking-wrap">
+        <form class="booking-form" id="bookingForm">
+          <label>
+            الاسم الكامل
+            <input type="text" id="clientName" required placeholder="اكتبي اسمك الكامل" />
+          </label>
+
+          <label>
+            رقم الهاتف
+            <input type="tel" id="clientPhone" required placeholder="07XXXXXXXX" />
+          </label>
+
+          <label>
+            الخدمة المطلوبة
+            <select id="serviceSelect" required>
+              <option value="">اختاري الخدمة</option>
+              <option>عرض الليزر</option>
+              <option>مكياج عروس / عرض العروس</option>
+              <option>هايدرافيشيال وتنظيف عميق</option>
+              <option>جلسات العناية بالبشرة</option>
+              <option>مانيكير / بديكير</option>
+              <option>شعر واستشوار</option>
+              <option>العروض والجوائز</option>
+            </select>
+          </label>
+
+          <label>
+            التاريخ المفضل
+            <input type="date" id="bookingDate" required />
+          </label>
+
+          <label>
+            الوقت المفضل
+            <input type="time" id="bookingTime" required />
+          </label>
+
+          <label class="full">
+            ملاحظات إضافية
+            <textarea id="bookingNotes" placeholder="مثلاً: أريد معرفة السعر، أو أحتاج موعد مساءً"></textarea>
+          </label>
+
+          <button type="submit" class="btn primary full">إرسال الطلب عبر واتساب</button>
+          <p class="form-note">الحجز لا يُعد مؤكدًا إلا بعد التواصل معكِ لتثبيت الموعد.</p>
+        </form>
+
+        <div class="contact-card">
+          <h3>للحجز والاستفسار</h3>
+          <p>واتساب / اتصال</p>
+          <strong>0792877358</strong>
+          <span>الرصيفة، محافظة الزرقاء – الجبل الشمالي – بجانب صيدلية زينب</span>
+          <button class="btn ghost dark" id="directWhatsapp">تواصلي واتساب الآن</button>
+        </div>
+
+        <div class="page-nav full">
+          <button data-view-button="gallery">السابق: المعرض</button>
+          <button data-view-button="home">العودة للرئيسية</button>
+          <button data-view-button="contact">التالي: التواصل</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="view" id="contact">
+      <div class="page-hero small">
+        <p>Contact Us</p>
+        <h2>تواصلي معنا</h2>
+        <span>نرحب برسائلك واستفساراتك لتأكيد المواعيد والعروض المتاحة.</span>
+      </div>
+
+      <section class="content-wrap contact-layout">
+        <div class="contact-card large">
+          <h3>لنا الأصفر</h3>
+          <p>Lana Al-Asfar Beauty & Skin Care</p>
+          <strong>0792877358</strong>
+          <span>الرصيفة، محافظة الزرقاء – الجبل الشمالي – بجانب صيدلية زينب</span>
+          <button class="btn primary" id="contactWhatsapp">تواصلي عبر واتساب</button>
+        </div>
+
+        <div class="about-box">
+          <h3>من نحن</h3>
+          <p>
+            في لنا الأصفر نؤمن أن الجمال يبدأ من العناية الصحيحة، وأن كل سيدة تستحق تجربة مريحة،
+            راقية وواضحة. نقدم خدمات العناية بالبشرة، الليزر، المكياج، الشعر والأظافر مع اهتمام بالتفاصيل.
+          </p>
+        </div>
+
+        <div class="page-nav full">
+          <button data-view-button="booking">السابق: الحجز</button>
+          <button data-view-button="home">العودة للرئيسية</button>
+        </div>
+      </section>
     </section>
   </main>
 
-  <a class="whatsapp-float" id="waFloat" href="https://wa.me/962792877358" target="_blank" rel="noreferrer" aria-label="WhatsApp">✆</a>
+  <button class="whatsapp-float" id="whatsappFloat" aria-label="تواصل واتساب">☘</button>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose">×</button>
+    <img src="" alt="" id="lightboxImage" />
+  </div>
 
   <footer class="footer">
-    <div class="container footer-grid">
-      <div><strong>لنا الأصفر</strong><br><small>Lana Al-Asfar Beauty & Skin Care · Zarqa, Jordan</small><br><small>الحجز لا يعتبر مؤكدًا إلا بعد التواصل معك.</small></div>
-      <div class="socials"><a href="https://www.instagram.com/lanaalasfar7/" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com/profile.php?id=100063583898506" target="_blank" rel="noreferrer">Facebook</a><a href="https://wa.me/962792877358" target="_blank" rel="noreferrer">WhatsApp</a></div>
+    <div>
+      <img src="assets/logo.svg" alt="لنا الأصفر" />
+      <h3>لنا الأصفر</h3>
+      <p>Lana Al-Asfar Beauty & Skin Care</p>
+    </div>
+
+    <div>
+      <h4>روابط سريعة</h4>
+      <button data-view-button="home">الرئيسية</button>
+      <button data-view-button="services">الخدمات</button>
+      <button data-view-button="offers">العروض</button>
+      <button data-view-button="booking">الحجز</button>
+    </div>
+
+    <div>
+      <h4>تواصل معنا</h4>
+      <p>0792877358</p>
+      <p>الرصيفة – الجبل الشمالي – بجانب صيدلية زينب</p>
     </div>
   </footer>
 
-<script>
-const PHONE_DISPLAY = '+962 7 9287 7358';
-const WA_URL = 'https://wa.me/962792877358?text=' + encodeURIComponent('مرحبًا، أريد الاستفسار عن الخدمات وحجز موعد.');
-document.getElementById('waFloat').href = WA_URL;
-
-const services = [
-  {ar:'هيدرافيشل وتنظيف عميق', en:'HydraFacial & Deep Cleansing', img:'assets/hydrafacial.webp', icon:'💧', desc:'تنظيف عميق، ترطيب، وتجديد مظهر البشرة بطريقة لطيفة.'},
-  {ar:'جلسات العناية بالبشرة', en:'Skin Care Sessions', img:'assets/facial-care.webp', icon:'🌸', desc:'عناية مخصصة حسب نوع البشرة واحتياجها.'},
-  {ar:'جلسة نضارة للبشرة', en:'Facial Glow Session', img:'assets/glow-session.webp', icon:'✨', desc:'جلسات لتحسين مظهر النضارة والإشراق بعد التقييم.'},
-  {ar:'إزالة الشعر بالليزر', en:'Laser Hair Removal', img:'assets/laser.webp', icon:'⚡', desc:'حجز جلسات الليزر مع تأكيد التفاصيل قبل الموعد.'},
-  {ar:'مانيكير', en:'Manicure', img:'assets/manicure.webp', icon:'💅', desc:'عناية أنيقة بالأظافر ومظهر مرتب.'},
-  {ar:'بديكير', en:'Pedicure', img:'assets/pedicure.webp', icon:'🦶', desc:'عناية بالقدمين والأظافر بلمسة ناعمة.'},
-  {ar:'لون لليد', en:'Nail Color', img:'assets/nail-color.webp', icon:'🪄', desc:'اختيار ألوان مرتبة حسب المتوفر والمناسبة.'},
-  {ar:'استشوار شعر', en:'Hair Styling', img:'assets/hair-styling.webp', icon:'💇‍♀️', desc:'تصفيف شعر مرتب للمناسبات واليوميات.'},
-  {ar:'قص أطراف', en:'Hair Trim', img:'assets/hair-trim.webp', icon:'✂️', desc:'تجديد الأطراف والمحافظة على شكل الشعر.'}
-];
-
-const servicesGrid = document.getElementById('servicesGrid');
-const serviceSelect = document.getElementById('service');
-services.forEach((s, i) => {
-  const card = document.createElement('article');
-  card.className = 'service-card';
-  card.innerHTML = `<div class="img"><img src="${s.img}" alt="${s.ar}"></div><span class="service-icon">${s.icon}</span><div class="service-body"><h3>${s.ar}</h3><span class="en">${s.en}</span><p>${s.desc}</p><a class="card-cta" href="#booking" data-service="${s.ar}">احجزي هذه الخدمة · Book</a></div>`;
-  servicesGrid.appendChild(card);
-  const option = document.createElement('option'); option.value=s.ar; option.textContent=s.ar + ' — ' + s.en; serviceSelect.appendChild(option);
-});
-servicesGrid.addEventListener('click', (e)=>{ const c=e.target.closest('[data-service]'); if(c){ serviceSelect.value=c.dataset.service; }});
-
-const form = document.getElementById('bookingForm');
-const notice = document.getElementById('bookingNotice');
-const key = 'lanaAlAsfarBookingsV2';
-function getBookings(){ try{return JSON.parse(localStorage.getItem(key)||'[]')}catch(e){return []} }
-function setBookings(data){ localStorage.setItem(key, JSON.stringify(data)); }
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(form).entries());
-  const booking = {...data, createdAt:new Date().toISOString(), status:'new'};
-  const bookings = getBookings(); bookings.unshift(booking); setBookings(bookings);
-  const msg = `مرحبًا، أريد حجز موعد.\nالاسم: ${data.name}\nالهاتف: ${data.phone}\nالخدمة: ${data.service}\nالتاريخ: ${data.date}\nالوقت: ${data.time}\nملاحظات: ${data.notes || '-'} `;
-  notice.innerHTML = `تم استلام طلب الحجز، سنتواصل معك لتأكيد الموعد. <br><a style="color:white;font-weight:900" target="_blank" rel="noreferrer" href="https://wa.me/962792877358?text=${encodeURIComponent(msg)}">إرسال تفاصيل الحجز عبر واتساب الآن</a>`;
-  notice.classList.add('show'); form.reset(); renderAdmin(false);
-});
-
-document.getElementById('adminBtn').addEventListener('click', ()=>{
-  const pass = document.getElementById('adminPassword').value;
-  if(pass === 'admin123'){ document.getElementById('adminPanel').classList.add('show'); renderAdmin(true); } else alert('كلمة المرور غير صحيحة');
-});
-function renderAdmin(force){
-  const panel = document.getElementById('adminPanel'); if(!panel.classList.contains('show') && !force) return;
-  const bookings = getBookings();
-  if(!bookings.length){ panel.innerHTML = '<p>لا توجد حجوزات محفوظة على هذا الجهاز.</p>'; return; }
-  panel.innerHTML = `<p><b>${bookings.length}</b> طلبات محلية</p>` + bookings.map(b=>`<div class="booking-row"><strong>${b.name}</strong> · <span dir="ltr">${b.phone}</span><br>${b.service}<br>${b.date} — ${b.time}<br><small>${b.notes||''}</small></div>`).join('') + `<button type="button" onclick="localStorage.removeItem('${key}'); renderAdmin(true);">حذف كل الطلبات المحلية</button>`;
-}
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
