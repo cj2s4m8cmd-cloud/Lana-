@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Lana Al-Asfar logo">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b46ad8"/>
+      <stop offset="0.45" stop-color="#7b2aa3"/>
+      <stop offset="1" stop-color="#3d0b59"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9e5a6"/>
+      <stop offset="1" stop-color="#d1a34f"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="226" fill="#fff"/>
+  <circle cx="256" cy="256" r="218" fill="none" stroke="url(#gold)" stroke-width="12"/>
+  <path d="M307 80c-25 30-43 67-44 111-2 57 21 94 57 123 43-62 42-143-13-234Z" fill="url(#g)" opacity=".94"/>
+  <path d="M211 105c-70 50-103 121-92 190 10 66 63 104 118 116-35-40-45-93-30-148 13-48 42-87 79-123-24-19-49-31-75-35Z" fill="url(#g)" opacity=".72"/>
+  <path d="M337 178c43 21 67 57 64 96-4 62-66 106-150 113 34-20 56-47 67-80 13-39 9-82 19-129Z" fill="url(#g)" opacity=".45"/>
+  <text x="257" y="407" text-anchor="middle" font-size="96" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#612079">LA</text>
+</svg>
