@@ -3,33 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>لنا الأصفر | Lana Al-Asfar Beauty & Skin Care</title>
+  <title>لنا الأصفر | Lana Al-Asfar Beauty Center</title>
   <meta name="description" content="لنا الأصفر للعناية بالبشرة والجمال في الرصيفة والزرقاء: ليزر، هايدرافيشيال، مكياج عرايس، شعر، أظافر، وعروض خاصة مع حجز عبر واتساب." />
-  <meta name="keywords" content="لنا الأصفر, صالون, عناية بالبشرة, ليزر, هايدرافيشيال, مكياج عرايس, الرصيفة, الزرقاء" />
-
-  <meta property="og:title" content="لنا الأصفر | Lana Al-Asfar Beauty & Skin Care" />
+  <meta name="keywords" content="لنا الأصفر, Lana Al-Asfar, صالون, عناية بالبشرة, ليزر, هايدرافيشيال, مكياج عرايس, الرصيفة, الزرقاء" />
+  <meta property="og:title" content="لنا الأصفر | Lana Al-Asfar Beauty Center" />
   <meta property="og:description" content="خدمات جمال وعناية بالبشرة، ليزر، مكياج عرايس، شعر وأظافر مع عروض خاصة وحجز سريع." />
   <meta property="og:image" content="assets/background.webp" />
   <meta property="og:type" content="website" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Playfair+Display:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Playfair+Display:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
   <header class="site-header">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="القائمة الرئيسية">
       <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
 
       <a href="#home" class="brand" data-view-link="home" aria-label="العودة للرئيسية">
-        <img src="assets/logo.svg" alt="Lana Al-Asfar Logo" class="brand-logo" />
+        <img src="assets/logo.webp" alt="Lana Al-Asfar Logo" class="brand-logo" />
         <span>
           <strong>لنا الأصفر</strong>
-          <small>Lana Al-Asfar Beauty & Skin Care</small>
+          <small>Beauty Center</small>
         </span>
       </a>
 
@@ -44,63 +39,57 @@
   </header>
 
   <main>
-    <!-- HOME -->
     <section class="view active" id="home">
       <div class="hero">
         <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-
+        <div class="hero-shine"></div>
         <div class="hero-content reveal">
-          <p class="eyebrow">Lana Al-Asfar Beauty & Skin Care</p>
-          <h1>
-            لنا الأصفر
-            <span>عنوان الجمال والثقة</span>
-          </h1>
-          <h2>Beauty begins with the right care</h2>
+          <div class="hero-logo-card">
+            <img src="assets/logo.webp" alt="Lana Al-Asfar Beauty Center Logo" />
+          </div>
+          <p class="eyebrow">Lana Al-Asfar Beauty Center</p>
+          <h1>لنا الأصفر <span>عنوان الجمال والثقة</span></h1>
+          <h2>Beauty begins with confidence</h2>
           <p class="hero-text">
             خدمات متكاملة للعناية بالبشرة، الليزر، المكياج، الشعر والأظافر،
             مع عروض مميزة وحجز سريع عبر واتساب.
           </p>
-
           <div class="hero-actions">
             <button class="btn primary" data-view-button="booking">احجزي موعدك الآن</button>
-            <button class="btn ghost" data-view-button="offers">شاهدي العروض</button>
+            <button class="btn glass" data-view-button="offers">شاهدي العروض</button>
           </div>
         </div>
       </div>
+
+      <section class="soft-stats reveal">
+        <div class="section-title light-title">
+          <p>Today’s Beauty Pulse</p>
+          <h2>نبض لنا الأصفر اليوم</h2>
+          <span>مؤشرات بسيطة حول الحجز، العروض، والتفاعل الرقمي</span>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card"><strong data-count="24">0</strong><span>طلبات حجز هذا الأسبوع</span><small>Weekly booking requests</small></div>
+          <div class="stat-card"><strong data-count="14">0</strong><span>استفسارات اليوم</span><small>Today’s inquiries</small></div>
+          <div class="stat-card"><strong data-count="6">0</strong><span>عروض فعّالة</span><small>Active offers</small></div>
+          <div class="stat-card"><strong data-count="4">0</strong><span>مواعيد متاحة اليوم</span><small>Available slots</small></div>
+          <div class="stat-card featured-stat"><strong data-count="210">0</strong><span>زائرات ومهتمات هذا الشهر</span><small>Monthly digital interest</small></div>
+          <div class="stat-card booking-stat"><strong data-count="5">0</strong><span>حجوزات جديدة عبر الموقع</span><small>New website bookings</small></div>
+        </div>
+        <p class="stats-note">هذه مؤشرات عرض تنظيمية وتسويقية، وليست نظام متابعة مباشر لحظي.</p>
+      </section>
 
       <section class="quick-section reveal">
         <div class="section-title">
           <p>Our Featured Services</p>
           <h2>خدماتنا المميزة</h2>
         </div>
-
         <div class="icon-services">
-          <button data-view-button="offer-laser">
-            <span>✦</span>
-            الليزر
-            <small>Laser</small>
-          </button>
-          <button data-view-button="services">
-            <span>◌</span>
-            العناية بالبشرة
-            <small>Skin Care</small>
-          </button>
-          <button data-view-button="offer-bridal">
-            <span>♕</span>
-            العرائس
-            <small>Bridal</small>
-          </button>
-          <button data-view-button="services">
-            <span>✂</span>
-            الشعر
-            <small>Hair</small>
-          </button>
-          <button data-view-button="services">
-            <span>❦</span>
-            الأظافر
-            <small>Nails</small>
-          </button>
+          <button data-view-button="offer-laser"><span>✦</span>الليزر<small>Laser</small></button>
+          <button data-view-button="services"><span>◌</span>العناية بالبشرة<small>Skin Care</small></button>
+          <button data-view-button="offer-bridal"><span>♕</span>العرائس<small>Bridal</small></button>
+          <button data-view-button="services"><span>✂</span>الشعر<small>Hair</small></button>
+          <button data-view-button="services"><span>❦</span>الأظافر<small>Nails</small></button>
         </div>
       </section>
 
@@ -109,34 +98,10 @@
           <p>Limited Time Offers</p>
           <h2>العروض المميزة</h2>
         </div>
-
         <div class="cards-grid">
-          <article class="card">
-            <img src="assets/laser.webp" alt="عروض الليزر" />
-            <div>
-              <h3>عروض الليزر المميزة</h3>
-              <p>جلسات ليزر مريحة بأجهزة حديثة مع متابعة حسب احتياج كل حالة.</p>
-              <button class="text-btn" data-view-button="offer-laser">عرض التفاصيل</button>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="assets/facial-care.webp" alt="مكياج عرايس" />
-            <div>
-              <h3>مكياج عرايس</h3>
-              <p>إطلالة عروس أنيقة بتفاصيل ناعمة وثبات مناسب للحفل والتصوير.</p>
-              <button class="text-btn" data-view-button="offer-bridal">عرض التفاصيل</button>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="assets/glow-session.webp" alt="جوائز وعروض" />
-            <div>
-              <h3>جوائز وعروض خاصة</h3>
-              <p>عروض وجوائز تُعلن بشفافية مع خدمات عناية وتجميل مميزة.</p>
-              <button class="text-btn" data-view-button="offer-prizes">عرض التفاصيل</button>
-            </div>
-          </article>
+          <article class="card"><img src="assets/laser.webp" alt="عروض الليزر" /><div><h3>عروض الليزر المميزة</h3><p>جلسات ليزر مريحة بأجهزة حديثة مع متابعة حسب احتياج كل حالة.</p><button class="text-btn" data-view-button="offer-laser">عرض التفاصيل</button></div></article>
+          <article class="card"><img src="assets/facial-care.webp" alt="مكياج عرايس" /><div><h3>مكياج عرايس</h3><p>إطلالة عروس أنيقة بتفاصيل ناعمة وثبات مناسب للحفل والتصوير.</p><button class="text-btn" data-view-button="offer-bridal">عرض التفاصيل</button></div></article>
+          <article class="card"><img src="assets/glow-session.webp" alt="جوائز وعروض" /><div><h3>جوائز وعروض خاصة</h3><p>عروض وجوائز تُعلن بشفافية مع خدمات عناية وتجميل مميزة.</p><button class="text-btn" data-view-button="offer-prizes">عرض التفاصيل</button></div></article>
         </div>
       </section>
 
@@ -148,231 +113,59 @@
       </section>
     </section>
 
-    <!-- SERVICES -->
     <section class="view" id="services">
-      <div class="page-hero small">
-        <p>Services</p>
-        <h2>خدمات لنا الأصفر</h2>
-        <span>اختاري الخدمة المناسبة، وتواصلي معنا لتأكيد التفاصيل والموعد.</span>
-      </div>
-
+      <div class="page-hero small"><p>Services</p><h2>خدمات لنا الأصفر</h2><span>اختاري الخدمة المناسبة، وتواصلي معنا لتأكيد التفاصيل والموعد.</span></div>
       <section class="content-wrap">
         <div class="cards-grid service-grid">
-          <article class="card">
-            <img src="assets/hydrafacial.webp" alt="هايدرافيشيال وتنظيف عميق" />
-            <div>
-              <h3>هايدرافيشيال وتنظيف عميق</h3>
-              <p>تنظيف وترطيب يساعد على تحسين مظهر البشرة ومنحها نضارة أوضح.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="assets/laser.webp" alt="إزالة الشعر بالليزر" />
-            <div>
-              <h3>إزالة الشعر بالليزر</h3>
-              <p>جلسات مريحة لمناطق مختلفة من الجسم حسب نوع البشرة والشعر.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="assets/facial-treatment.webp" alt="جلسات العناية بالبشرة" />
-            <div>
-              <h3>جلسات العناية بالبشرة</h3>
-              <p>خدمات نضارة وتفتيح ومتابعة تناسب احتياج كل بشرة.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="assets/manicure.webp" alt="مانيكير" />
-            <div>
-              <h3>مانيكير ولون لليد</h3>
-              <p>عناية أنيقة بالأظافر مع ألوان ناعمة ومرتبة.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="assets/pedicure.webp" alt="بديكير" />
-            <div>
-              <h3>بديكير وعناية بالأقدام</h3>
-              <p>نعومة وترتيب للأقدام ضمن تجربة مريحة.</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="assets/hair-styling.webp" alt="استشوار شعر" />
-            <div>
-              <h3>شعر واستشوار</h3>
-              <p>تجهيز شعر للمناسبات وقص أطراف للحفاظ على المظهر الصحي.</p>
-            </div>
-          </article>
+          <article class="card"><img src="assets/hydrafacial.webp" alt="هايدرافيشيال وتنظيف عميق" /><div><h3>هايدرافيشيال وتنظيف عميق</h3><p>تنظيف وترطيب يساعد على تحسين مظهر البشرة ومنحها نضارة أوضح.</p></div></article>
+          <article class="card"><img src="assets/laser.webp" alt="إزالة الشعر بالليزر" /><div><h3>إزالة الشعر بالليزر</h3><p>جلسات مريحة لمناطق مختلفة من الجسم حسب نوع البشرة والشعر.</p></div></article>
+          <article class="card"><img src="assets/facial-treatment.webp" alt="جلسات العناية بالبشرة" /><div><h3>جلسات العناية بالبشرة</h3><p>خدمات نضارة وتفتيح ومتابعة تناسب احتياج كل بشرة.</p></div></article>
+          <article class="card"><img src="assets/manicure.webp" alt="مانيكير" /><div><h3>مانيكير ولون لليد</h3><p>عناية أنيقة بالأظافر مع ألوان ناعمة ومرتبة.</p></div></article>
+          <article class="card"><img src="assets/pedicure.webp" alt="بديكير" /><div><h3>بديكير وعناية بالأقدام</h3><p>نعومة وترتيب للأقدام ضمن تجربة مريحة.</p></div></article>
+          <article class="card"><img src="assets/hair-styling.webp" alt="استشوار شعر" /><div><h3>شعر واستشوار</h3><p>تجهيز شعر للمناسبات وقص أطراف للحفاظ على المظهر الصحي.</p></div></article>
         </div>
-
-        <div class="page-nav">
-          <button data-view-button="home">العودة للرئيسية</button>
-          <button data-view-button="offers">التالي: العروض</button>
-        </div>
+        <div class="page-nav"><button data-view-button="home">العودة للرئيسية</button><button data-view-button="offers">التالي: العروض</button></div>
       </section>
     </section>
 
-    <!-- OFFERS LIST -->
     <section class="view" id="offers">
-      <div class="page-hero small">
-        <p>Special Offers</p>
-        <h2>العروض الخاصة</h2>
-        <span>عروض مختارة لفترة محدودة. الحجز يتم تأكيده بعد التواصل.</span>
-      </div>
-
+      <div class="page-hero small"><p>Special Offers</p><h2>العروض الخاصة</h2><span>عروض مختارة لفترة محدودة. الحجز يتم تأكيده بعد التواصل.</span></div>
       <section class="content-wrap">
         <div class="cards-grid">
-          <article class="offer-card">
-            <img src="assets/laser.webp" alt="عرض الليزر" />
-            <div>
-              <h3>عروض الليزر المميزة</h3>
-              <p>تخلّصي من عناء الطرق التقليدية، واستمتعي بتجربة ليزر مريحة تساعدك على الحصول على بشرة أكثر نعومة وترتيبًا.</p>
-              <button class="btn small" data-view-button="offer-laser">تفاصيل العرض</button>
-            </div>
-          </article>
-
-          <article class="offer-card">
-            <img src="assets/facial-care.webp" alt="عرض العروس" />
-            <div>
-              <h3>عرض العروس ومكياج العرايس</h3>
-              <p>الصالون عليكِ والبدلة علينا. تألقي في يوم عرسك بعرض خاص بسعر 200 فقط حتى 15/7.</p>
-              <button class="btn small" data-view-button="offer-bridal">تفاصيل العرض</button>
-            </div>
-          </article>
-
-          <article class="offer-card">
-            <img src="assets/glow-session.webp" alt="جوائز وعروض خاصة" />
-            <div>
-              <h3>جوائز حقيقية وعروض مميزة</h3>
-              <p>احجزي الآن وادخلي فرصة الاستفادة من عروضنا وجوائزنا الخاصة بكل شفافية.</p>
-              <button class="btn small" data-view-button="offer-prizes">تفاصيل العرض</button>
-            </div>
-          </article>
+          <article class="offer-card"><img src="assets/laser.webp" alt="عرض الليزر" /><div><h3>عروض الليزر المميزة</h3><p>تخلّصي من عناء الطرق التقليدية، واستمتعي بتجربة ليزر مريحة تساعدك على الحصول على بشرة أكثر نعومة وترتيبًا.</p><button class="btn small" data-view-button="offer-laser">تفاصيل العرض</button></div></article>
+          <article class="offer-card"><img src="assets/facial-care.webp" alt="عرض العروس" /><div><h3>عرض العروس ومكياج العرايس</h3><p>الصالون عليكِ والبدلة علينا. تألقي في يوم عرسك بعرض خاص بسعر 200 فقط حتى 15/7.</p><button class="btn small" data-view-button="offer-bridal">تفاصيل العرض</button></div></article>
+          <article class="offer-card"><img src="assets/glow-session.webp" alt="جوائز وعروض خاصة" /><div><h3>جوائز حقيقية وعروض مميزة</h3><p>احجزي الآن وادخلي فرصة الاستفادة من عروضنا وجوائزنا الخاصة بكل شفافية.</p><button class="btn small" data-view-button="offer-prizes">تفاصيل العرض</button></div></article>
+          <article class="offer-card"><img src="assets/hydrafacial.webp" alt="عرض هايدرافيشيال" /><div><h3>عرض هايدرافيشيال ونضارة</h3><p>جلسة عناية وتنظيف تمنح البشرة مظهرًا أنعم وأكثر إشراقًا حسب احتياج كل بشرة.</p><button class="btn small" data-book-service="هايدرافيشيال وتنظيف عميق">احجزي العرض</button></div></article>
+          <article class="offer-card"><img src="assets/manicure.webp" alt="عرض الأظافر" /><div><h3>عرض الأظافر</h3><p>عناية لليدين أو القدمين مع لون مرتب ولمسة أنيقة تناسب المناسبات واليوميات.</p><button class="btn small" data-book-service="مانيكير / بديكير">احجزي العرض</button></div></article>
+          <article class="offer-card"><img src="assets/hair-styling.webp" alt="عرض الشعر" /><div><h3>عرض الشعر والاستشوار</h3><p>تجهيز شعر ناعم ومرتب للمناسبات مع قص أطراف أو استشوار حسب الطلب.</p><button class="btn small" data-book-service="شعر واستشوار">احجزي العرض</button></div></article>
         </div>
-
-        <div class="page-nav">
-          <button data-view-button="services">السابق: الخدمات</button>
-          <button data-view-button="home">العودة للرئيسية</button>
-          <button data-view-button="gallery">التالي: المعرض</button>
-        </div>
+        <div class="page-nav"><button data-view-button="services">السابق: الخدمات</button><button data-view-button="home">العودة للرئيسية</button><button data-view-button="gallery">التالي: المعرض</button></div>
       </section>
     </section>
 
-    <!-- LASER OFFER -->
     <section class="view" id="offer-laser">
       <div class="detail-page">
         <img src="assets/laser.webp" alt="عروض الليزر" class="detail-image" />
-        <div class="detail-content">
-          <p class="eyebrow">Laser Offer</p>
-          <h2>عروض الليزر المميزة في لنا الأصفر</h2>
-          <p>
-            تخلّصي من عناء الشعر الزائد، واستمتعي بجلسات ليزر مريحة بأجهزة حديثة
-            تساعدك على الحصول على بشرة أكثر نعومة وترتيبًا.
-          </p>
-
-          <ul class="check-list">
-            <li>جلسات مريحة وسريعة.</li>
-            <li>مناسبة لمناطق مختلفة من الجسم.</li>
-            <li>متابعة حسب نوع البشرة والشعر.</li>
-            <li>بإشراف فريق مختص.</li>
-          </ul>
-
-          <div class="notice">
-            تختلف النتائج من شخص لآخر حسب نوع البشرة والشعر وعدد الجلسات المطلوبة.
-          </div>
-
-          <button class="btn primary" data-book-service="عرض الليزر">احجزي عرض الليزر</button>
-
-          <div class="page-nav">
-            <button data-view-button="offers">السابق: العروض</button>
-            <button data-view-button="home">العودة للرئيسية</button>
-            <button data-view-button="offer-bridal">التالي: عرض العروس</button>
-          </div>
-        </div>
+        <div class="detail-content"><p class="eyebrow">Laser Offer</p><h2>عروض الليزر المميزة في لنا الأصفر</h2><p>تخلّصي من عناء الشعر الزائد، واستمتعي بجلسات ليزر مريحة بأجهزة حديثة تساعدك على الحصول على بشرة أكثر نعومة وترتيبًا.</p><ul class="check-list"><li>جلسات مريحة وسريعة.</li><li>مناسبة لمناطق مختلفة من الجسم.</li><li>متابعة حسب نوع البشرة والشعر.</li><li>بإشراف فريق مختص.</li></ul><div class="notice">تختلف النتائج من شخص لآخر حسب نوع البشرة والشعر وعدد الجلسات المطلوبة.</div><button class="btn primary" data-book-service="عرض الليزر">احجزي عرض الليزر</button><div class="page-nav"><button data-view-button="offers">السابق: العروض</button><button data-view-button="home">العودة للرئيسية</button><button data-view-button="offer-bridal">التالي: عرض العروس</button></div></div>
       </div>
     </section>
 
-    <!-- BRIDAL OFFER -->
     <section class="view" id="offer-bridal">
       <div class="detail-page">
         <img src="assets/facial-care.webp" alt="مكياج عرايس" class="detail-image" />
-        <div class="detail-content">
-          <p class="eyebrow">Bridal Makeup</p>
-          <h2>مكياج عرايس عند لنا الأصفر</h2>
-          <p>
-            لأن يوم زفافك لا يتكرر، نمنحك إطلالة ناعمة، راقية، ومناسبة للحفل والتصوير.
-          </p>
-
-          <div class="price-box">
-            <strong>الصالون عليكِ… والبدلة علينا</strong>
-            <span>عرض خاص بسعر 200 فقط — ساري حتى 15/7</span>
-          </div>
-
-          <ul class="check-list">
-            <li>مكياج عروس احترافي بأسلوب أنيق.</li>
-            <li>ثبات مناسب لفترة الحفل.</li>
-            <li>لمسة ناعمة تبرز جمالك الطبيعي.</li>
-            <li>إطلالة مناسبة للصور والفيديو.</li>
-          </ul>
-
-          <div class="notice">
-            تفاصيل الباقة وتوفر البدلة يتم تأكيدها عند التواصل.
-          </div>
-
-          <button class="btn primary" data-book-service="مكياج عروس / عرض العروس">احجزي عرض العروس</button>
-
-          <div class="page-nav">
-            <button data-view-button="offer-laser">السابق: الليزر</button>
-            <button data-view-button="home">العودة للرئيسية</button>
-            <button data-view-button="offer-prizes">التالي: الجوائز</button>
-          </div>
-        </div>
+        <div class="detail-content"><p class="eyebrow">Bridal Makeup</p><h2>مكياج عرايس عند لنا الأصفر</h2><p>لأن يوم زفافك لا يتكرر، نمنحك إطلالة ناعمة، راقية، ومناسبة للحفل والتصوير.</p><div class="price-box"><strong>الصالون عليكِ… والبدلة علينا</strong><span>عرض خاص بسعر 200 فقط — ساري حتى 15/7</span></div><ul class="check-list"><li>مكياج عروس احترافي بأسلوب أنيق.</li><li>ثبات مناسب لفترة الحفل.</li><li>لمسة ناعمة تبرز جمالك الطبيعي.</li><li>إطلالة مناسبة للصور والفيديو.</li></ul><div class="notice">تفاصيل الباقة وتوفر البدلة يتم تأكيدها عند التواصل.</div><button class="btn primary" data-book-service="مكياج عروس / عرض العروس">احجزي عرض العروس</button><div class="page-nav"><button data-view-button="offer-laser">السابق: الليزر</button><button data-view-button="home">العودة للرئيسية</button><button data-view-button="offer-prizes">التالي: الجوائز</button></div></div>
       </div>
     </section>
 
-    <!-- PRIZES OFFER -->
     <section class="view" id="offer-prizes">
       <div class="detail-page">
         <img src="assets/glow-session.webp" alt="جوائز لنا الأصفر" class="detail-image" />
-        <div class="detail-content">
-          <p class="eyebrow">Real Prizes & Special Offers</p>
-          <h2>جوائز حقيقية وعروض مميزة</h2>
-          <p>
-            في لنا الأصفر نحرص أن تكون تجربتك واضحة ومميزة، من جودة الخدمة إلى شفافية العروض والجوائز.
-          </p>
-
-          <ul class="check-list">
-            <li>جوائز تُعلن وتُسلّم بشفافية.</li>
-            <li>عروض واضحة لفترة محدودة.</li>
-            <li>خدمات متنوعة للبشرة والجمال.</li>
-            <li>تأكيد الموعد بعد التواصل.</li>
-          </ul>
-
-          <div class="notice">
-            تُنفذ الجلسات بعناية وبما يناسب كل حالة، مع توضيح التفاصيل قبل تأكيد الحجز.
-          </div>
-
-          <button class="btn primary" data-book-service="العروض والجوائز">احجزي الآن</button>
-
-          <div class="page-nav">
-            <button data-view-button="offer-bridal">السابق: العروس</button>
-            <button data-view-button="home">العودة للرئيسية</button>
-            <button data-view-button="booking">التالي: الحجز</button>
-          </div>
-        </div>
+        <div class="detail-content"><p class="eyebrow">Real Prizes & Special Offers</p><h2>جوائز حقيقية وعروض مميزة</h2><p>في لنا الأصفر نحرص أن تكون تجربتك واضحة ومميزة، من جودة الخدمة إلى شفافية العروض والجوائز.</p><ul class="check-list"><li>جوائز تُعلن وتُسلّم بشفافية.</li><li>عروض واضحة لفترة محدودة.</li><li>خدمات متنوعة للبشرة والجمال.</li><li>تأكيد الموعد بعد التواصل.</li></ul><div class="notice">تُنفذ الجلسات بعناية وبما يناسب كل حالة، مع توضيح التفاصيل قبل تأكيد الحجز.</div><button class="btn primary" data-book-service="العروض والجوائز">احجزي الآن</button><div class="page-nav"><button data-view-button="offer-bridal">السابق: العروس</button><button data-view-button="home">العودة للرئيسية</button><button data-view-button="booking">التالي: الحجز</button></div></div>
       </div>
     </section>
 
-    <!-- GALLERY -->
     <section class="view" id="gallery">
-      <div class="page-hero small">
-        <p>Gallery</p>
-        <h2>معرض الصور</h2>
-        <span>اضغطي على أي صورة لعرضها بحجم أكبر.</span>
-      </div>
-
+      <div class="page-hero small"><p>Gallery</p><h2>معرض الصور</h2><span>اضغطي على أي صورة لعرضها بحجم أكبر.</span></div>
       <section class="content-wrap">
         <div class="gallery-grid">
           <img src="assets/hydrafacial.webp" alt="هايدرافيشيال" class="gallery-img" />
@@ -385,146 +178,51 @@
           <img src="assets/hair-styling.webp" alt="استشوار شعر" class="gallery-img" />
           <img src="assets/hair-trim.webp" alt="قص أطراف" class="gallery-img" />
         </div>
-
-        <div class="page-nav">
-          <button data-view-button="offers">السابق: العروض</button>
-          <button data-view-button="home">العودة للرئيسية</button>
-          <button data-view-button="booking">التالي: الحجز</button>
-        </div>
+        <div class="page-nav"><button data-view-button="offers">السابق: العروض</button><button data-view-button="home">العودة للرئيسية</button><button data-view-button="booking">التالي: الحجز</button></div>
       </section>
     </section>
 
-    <!-- BOOKING -->
     <section class="view" id="booking">
-      <div class="page-hero small">
-        <p>Book Your Appointment</p>
-        <h2>احجزي موعدك</h2>
-        <span>املئي البيانات وسيتم إرسال الطلب مباشرة عبر واتساب لتأكيد الموعد.</span>
-      </div>
-
+      <div class="page-hero small"><p>Book Your Appointment</p><h2>احجزي موعدك</h2><span>املئي البيانات وسيتم إرسال الطلب مباشرة عبر واتساب لتأكيد الموعد.</span></div>
       <section class="booking-wrap">
         <form class="booking-form" id="bookingForm">
-          <label>
-            الاسم الكامل
-            <input type="text" id="clientName" required placeholder="اكتبي اسمك الكامل" />
-          </label>
-
-          <label>
-            رقم الهاتف
-            <input type="tel" id="clientPhone" required placeholder="07XXXXXXXX" />
-          </label>
-
-          <label>
-            الخدمة المطلوبة
-            <select id="serviceSelect" required>
-              <option value="">اختاري الخدمة</option>
-              <option>عرض الليزر</option>
-              <option>مكياج عروس / عرض العروس</option>
-              <option>هايدرافيشيال وتنظيف عميق</option>
-              <option>جلسات العناية بالبشرة</option>
-              <option>مانيكير / بديكير</option>
-              <option>شعر واستشوار</option>
-              <option>العروض والجوائز</option>
-            </select>
-          </label>
-
-          <label>
-            التاريخ المفضل
-            <input type="date" id="bookingDate" required />
-          </label>
-
-          <label>
-            الوقت المفضل
-            <input type="time" id="bookingTime" required />
-          </label>
-
-          <label class="full">
-            ملاحظات إضافية
-            <textarea id="bookingNotes" placeholder="مثلاً: أريد معرفة السعر، أو أحتاج موعد مساءً"></textarea>
-          </label>
-
+          <label>الاسم الكامل<input type="text" id="clientName" required placeholder="اكتبي اسمك الكامل" /></label>
+          <label>رقم الهاتف<input type="tel" id="clientPhone" required placeholder="07XXXXXXXX" /></label>
+          <label>الخدمة المطلوبة<select id="serviceSelect" required><option value="">اختاري الخدمة</option><option>عرض الليزر</option><option>مكياج عروس / عرض العروس</option><option>هايدرافيشيال وتنظيف عميق</option><option>جلسات العناية بالبشرة</option><option>مانيكير / بديكير</option><option>شعر واستشوار</option><option>العروض والجوائز</option></select></label>
+          <label>التاريخ المفضل<input type="date" id="bookingDate" required /></label>
+          <label>الوقت المفضل<input type="time" id="bookingTime" required /></label>
+          <label class="full">ملاحظات إضافية<textarea id="bookingNotes" placeholder="مثلاً: أريد معرفة السعر، أو أحتاج موعد مساءً"></textarea></label>
           <button type="submit" class="btn primary full">إرسال الطلب عبر واتساب</button>
           <p class="form-note">الحجز لا يُعد مؤكدًا إلا بعد التواصل معكِ لتثبيت الموعد.</p>
         </form>
-
-        <div class="contact-card">
-          <h3>للحجز والاستفسار</h3>
-          <p>واتساب / اتصال</p>
-          <strong>0792877358</strong>
-          <span>الرصيفة، محافظة الزرقاء – الجبل الشمالي – بجانب صيدلية زينب</span>
-          <button class="btn ghost dark" id="directWhatsapp">تواصلي واتساب الآن</button>
-        </div>
-
-        <div class="page-nav full">
-          <button data-view-button="gallery">السابق: المعرض</button>
-          <button data-view-button="home">العودة للرئيسية</button>
-          <button data-view-button="contact">التالي: التواصل</button>
-        </div>
+        <div class="contact-card"><h3>للحجز والاستفسار</h3><p>واتساب / اتصال</p><strong>0792877358</strong><span>الرصيفة، محافظة الزرقاء – الجبل الشمالي – بجانب صيدلية زينب</span><button class="btn glass dark" id="directWhatsapp">تواصلي واتساب الآن</button></div>
+        <div class="page-nav full"><button data-view-button="gallery">السابق: المعرض</button><button data-view-button="home">العودة للرئيسية</button><button data-view-button="contact">التالي: التواصل</button></div>
       </section>
     </section>
 
-    <!-- CONTACT -->
     <section class="view" id="contact">
-      <div class="page-hero small">
-        <p>Contact Us</p>
-        <h2>تواصلي معنا</h2>
-        <span>نرحب برسائلك واستفساراتك لتأكيد المواعيد والعروض المتاحة.</span>
-      </div>
-
+      <div class="page-hero small"><p>Contact Us</p><h2>تواصلي معنا</h2><span>نرحب برسائلك واستفساراتك لتأكيد المواعيد والعروض المتاحة.</span></div>
       <section class="content-wrap contact-layout">
-        <div class="contact-card large">
-          <h3>لنا الأصفر</h3>
-          <p>Lana Al-Asfar Beauty & Skin Care</p>
-          <strong>0792877358</strong>
-          <span>الرصيفة، محافظة الزرقاء – الجبل الشمالي – بجانب صيدلية زينب</span>
-          <button class="btn primary" id="contactWhatsapp">تواصلي عبر واتساب</button>
-        </div>
-
-        <div class="about-box">
-          <h3>من نحن</h3>
-          <p>
-            في لنا الأصفر نؤمن أن الجمال يبدأ من العناية الصحيحة، وأن كل سيدة تستحق تجربة مريحة،
-            راقية وواضحة. نقدم خدمات العناية بالبشرة، الليزر، المكياج، الشعر والأظافر مع اهتمام بالتفاصيل.
-          </p>
-        </div>
-
-        <div class="page-nav full">
-          <button data-view-button="booking">السابق: الحجز</button>
-          <button data-view-button="home">العودة للرئيسية</button>
-        </div>
+        <div class="contact-card large"><h3>لنا الأصفر</h3><p>Lana Al-Asfar Beauty Center</p><strong>0792877358</strong><span>الرصيفة، محافظة الزرقاء – الجبل الشمالي – بجانب صيدلية زينب</span><button class="btn primary" id="contactWhatsapp">تواصلي عبر واتساب</button></div>
+        <div class="about-box"><h3>من نحن</h3><p>في لنا الأصفر نؤمن أن الجمال يبدأ من العناية الصحيحة، وأن كل سيدة تستحق تجربة مريحة، راقية وواضحة. نقدم خدمات العناية بالبشرة، الليزر، المكياج، الشعر والأظافر مع اهتمام بالتفاصيل.</p></div>
+        <div class="page-nav full"><button data-view-button="booking">السابق: الحجز</button><button data-view-button="home">العودة للرئيسية</button></div>
       </section>
     </section>
   </main>
 
-  <button class="whatsapp-float" id="whatsappFloat" aria-label="تواصل واتساب">☘</button>
+  <button class="whatsapp-float" id="whatsappFloat" aria-label="تواصل واتساب">☎</button>
+  <button class="music-toggle" id="musicToggle" aria-label="تشغيل أو إيقاف الموسيقى">♫</button>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose">×</button>
-    <img src="" alt="" id="lightboxImage" />
-  </div>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose">×</button><img src="" alt="" id="lightboxImage" /></div>
 
   <footer class="footer">
-    <div>
-      <img src="assets/logo.svg" alt="لنا الأصفر" />
-      <h3>لنا الأصفر</h3>
-      <p>Lana Al-Asfar Beauty & Skin Care</p>
-    </div>
-
-    <div>
-      <h4>روابط سريعة</h4>
-      <button data-view-button="home">الرئيسية</button>
-      <button data-view-button="services">الخدمات</button>
-      <button data-view-button="offers">العروض</button>
-      <button data-view-button="booking">الحجز</button>
-    </div>
-
-    <div>
-      <h4>تواصل معنا</h4>
-      <p>0792877358</p>
-      <p>الرصيفة – الجبل الشمالي – بجانب صيدلية زينب</p>
-    </div>
+    <div><img src="assets/logo.webp" alt="لنا الأصفر" /><h3>لنا الأصفر</h3><p>Beauty Center</p></div>
+    <div><h4>روابط سريعة</h4><button data-view-button="home">الرئيسية</button><button data-view-button="services">الخدمات</button><button data-view-button="offers">العروض</button><button data-view-button="booking">الحجز</button></div>
+    <div><h4>تواصل معنا</h4><p>0792877358</p><p>الرصيفة – الجبل الشمالي – بجانب صيدلية زينب</p></div>
   </footer>
 
+  <audio id="siteMusic" loop preload="none"><source src="assets/music.mp3" type="audio/mpeg" /></audio>
+  <audio id="clickSound" preload="auto"><source src="assets/click.mp3" type="audio/mpeg" /></audio>
   <script src="script.js"></script>
 </body>
 </html>
