@@ -7,7 +7,6 @@ const navMenu = document.getElementById("navLinks");
 const menuToggle = document.getElementById("menuToggle");
 const clickSound = document.getElementById("clickSound");
 const siteMusic = document.getElementById("siteMusic");
-const musicToggle = document.getElementById("musicToggle");
 
 function playClickSound() {
   if (!clickSound) return;
@@ -214,22 +213,39 @@ document.addEventListener("keydown", event => {
   if (event.key === "Escape") closeLightbox();
 });
 
-musicToggle?.addEventListener("click", async () => {
+let musicStarted = false;
+
+async function startMusicOnFirstTouch() {
+  if (!siteMusic || musicStarted) return;
+
+  try {
+    siteMusic.volume = 0.18;
+    await siteMusic.play();
+    musicStarted = true;
+  } catch (error) {
+    // إذا المتصفح منع الصوت، سيحاول مرة أخرى مع اللمسة التالية
+  }
+}
+
+function pauseMusicWhenLeaving() {
   if (!siteMusic) return;
 
-  if (siteMusic.paused) {
-    try {
-      siteMusic.volume = 0.22;
-      await siteMusic.play();
-      musicToggle.classList.add("playing");
-      musicToggle.textContent = "Ⅱ";
-    } catch (error) {
-      alert("اضغطي مرة أخرى لتشغيل الموسيقى.");
-    }
-  } else {
+  if (document.hidden) {
     siteMusic.pause();
-    musicToggle.classList.remove("playing");
-    musicToggle.textContent = "♫";
+    musicStarted = false;
+  }
+}
+
+document.addEventListener("pointerdown", startMusicOnFirstTouch);
+document.addEventListener("touchstart", startMusicOnFirstTouch);
+document.addEventListener("click", startMusicOnFirstTouch);
+
+document.addEventListener("visibilitychange", pauseMusicWhenLeaving);
+
+window.addEventListener("pagehide", () => {
+  if (siteMusic) {
+    siteMusic.pause();
+    musicStarted = false;
   }
 });
 
