@@ -5,6 +5,22 @@ const navLinks = document.querySelectorAll("[data-view-link]");
 const viewButtons = document.querySelectorAll("[data-view-button]");
 const navMenu = document.getElementById("navLinks");
 const menuToggle = document.getElementById("menuToggle");
+const clickSound = document.getElementById("clickSound");
+const siteMusic = document.getElementById("siteMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+function playClickSound() {
+  if (!clickSound) return;
+  clickSound.currentTime = 0;
+  clickSound.volume = 0.18;
+  clickSound.play().catch(() => {});
+}
+
+document.addEventListener("click", event => {
+  const clickable = event.target.closest("button, a, input, select, textarea, .card, .offer-card, .gallery-img");
+  if (!clickable) return;
+  playClickSound();
+});
 
 function showView(viewId, updateHash = true) {
   const target = document.getElementById(viewId);
@@ -19,16 +35,18 @@ function showView(viewId, updateHash = true) {
 
   if (navMenu) navMenu.classList.remove("open");
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   if (updateHash) {
     history.replaceState(null, "", "#" + viewId);
   }
 
   revealVisible();
+
+  if (viewId === "home") {
+    applyTwoHourStats();
+    animateCounters();
+  }
 }
 
 navLinks.forEach(link => {
@@ -56,15 +74,15 @@ function openWhatsapp(message) {
 }
 
 document.getElementById("whatsappFloat")?.addEventListener("click", () => {
-  openWhatsapp("مرحبًا، أريد الاستفسار عن الخدمات وحجز موعد لدى لنا الأصفر.");
+  openWhatsapp("مرحبًا، وصلت إلى لنا الأصفر من خلال الموقع الإلكتروني وأريد الاستفسار عن الخدمات وحجز موعد.");
 });
 
 document.getElementById("directWhatsapp")?.addEventListener("click", () => {
-  openWhatsapp("مرحبًا، أريد حجز موعد لدى لنا الأصفر.");
+  openWhatsapp("مرحبًا، وصلت إلى لنا الأصفر من خلال الموقع الإلكتروني وأريد حجز موعد.");
 });
 
 document.getElementById("contactWhatsapp")?.addEventListener("click", () => {
-  openWhatsapp("مرحبًا، أريد التواصل معكم بخصوص خدمات لنا الأصفر.");
+  openWhatsapp("مرحبًا، وصلت إلى لنا الأصفر من خلال الموقع الإلكتروني وأريد التواصل بخصوص الخدمات والعروض.");
 });
 
 document.querySelectorAll("[data-book-service]").forEach(button => {
@@ -96,8 +114,9 @@ bookingForm?.addEventListener("submit", event => {
   }
 
   const message = `
-مرحبًا، أريد حجز موعد لدى لنا الأصفر.
+حجز جديد من الموقع الرسمي لنا الأصفر 🌐
 
+المصدر: تم إرسال الطلب بواسطة الموقع الإلكتروني
 الاسم: ${name}
 رقم الهاتف: ${phone}
 الخدمة: ${service}
@@ -110,6 +129,60 @@ bookingForm?.addEventListener("submit", event => {
 
   openWhatsapp(message);
 });
+
+function applyTwoHourStats() {
+  const now = new Date();
+  const twoHourBlock = Math.floor(now.getTime() / (1000 * 60 * 60 * 2));
+
+  function blockNumber(min, max, offset) {
+    const value = Math.abs(Math.sin(twoHourBlock + offset) * 10000);
+    return Math.floor(min + (value % (max - min + 1)));
+  }
+
+  const stats = [
+    { value: blockNumber(22, 29, 1) },
+    { value: blockNumber(12, 18, 2) },
+    { value: 6 },
+    { value: blockNumber(2, 6, 3) },
+    { value: blockNumber(190, 260, 4) },
+    { value: blockNumber(3, 8, 5) }
+  ];
+
+  const counters = document.querySelectorAll("[data-count]");
+
+  counters.forEach((counter, index) => {
+    if (stats[index]) {
+      counter.dataset.count = stats[index].value;
+      counter.textContent = "0";
+      counter.dataset.done = "false";
+    }
+  });
+}
+
+function animateCounters() {
+  const counters = document.querySelectorAll("[data-count]");
+
+  counters.forEach(counter => {
+    if (counter.dataset.done === "true") return;
+
+    const target = Number(counter.dataset.count);
+    let current = 0;
+    const duration = 900;
+    const steps = 30;
+    const increment = Math.max(1, Math.ceil(target / steps));
+    const intervalTime = Math.floor(duration / steps);
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+        counter.dataset.done = "true";
+      }
+      counter.textContent = current;
+    }, intervalTime);
+  });
+}
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
@@ -125,6 +198,7 @@ document.querySelectorAll(".gallery-img").forEach(img => {
 });
 
 function closeLightbox() {
+  if (!lightbox || !lightboxImage) return;
   lightbox.classList.remove("open");
   lightbox.setAttribute("aria-hidden", "true");
   lightboxImage.src = "";
@@ -138,6 +212,25 @@ lightbox?.addEventListener("click", event => {
 
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") closeLightbox();
+});
+
+musicToggle?.addEventListener("click", async () => {
+  if (!siteMusic) return;
+
+  if (siteMusic.paused) {
+    try {
+      siteMusic.volume = 0.22;
+      await siteMusic.play();
+      musicToggle.classList.add("playing");
+      musicToggle.textContent = "Ⅱ";
+    } catch (error) {
+      alert("اضغطي مرة أخرى لتشغيل الموسيقى.");
+    }
+  } else {
+    siteMusic.pause();
+    musicToggle.classList.remove("playing");
+    musicToggle.textContent = "♫";
+  }
 });
 
 function revealVisible() {
@@ -159,8 +252,9 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
 window.addEventListener("scroll", revealVisible);
 
+applyTwoHourStats();
 const initialView = window.location.hash ? window.location.hash.replace("#", "") : "home";
 showView(initialView, false);
+if (initialView === "home") animateCounters();
