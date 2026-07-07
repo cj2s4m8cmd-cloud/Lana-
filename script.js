@@ -7,6 +7,10 @@ const navMenu = document.getElementById("navLinks");
 const menuToggle = document.getElementById("menuToggle");
 const clickSound = document.getElementById("clickSound");
 const siteMusic = document.getElementById("siteMusic");
+const bookingForm = document.getElementById("bookingForm");
+const reviewForm = document.getElementById("reviewForm");
+const bookingCounter = document.querySelector(".booking-stat strong[data-count]");
+let musicStarted = false;
 
 function playClickSound() {
   if (!clickSound) return;
@@ -16,7 +20,7 @@ function playClickSound() {
 }
 
 document.addEventListener("click", event => {
-  const clickable = event.target.closest("button, a, input, select, textarea, .card, .offer-card, .gallery-img");
+  const clickable = event.target.closest("button, a, input, select, textarea, .card, .offer-card, .gallery-img, .experience-card");
   if (!clickable) return;
   playClickSound();
 });
@@ -33,12 +37,9 @@ function showView(viewId, updateHash = true) {
   });
 
   if (navMenu) navMenu.classList.remove("open");
-
   window.scrollTo({ top: 0, behavior: "smooth" });
 
-  if (updateHash) {
-    history.replaceState(null, "", "#" + viewId);
-  }
+  if (updateHash) history.replaceState(null, "", "#" + viewId);
 
   revealVisible();
 
@@ -56,15 +57,11 @@ navLinks.forEach(link => {
 });
 
 viewButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    showView(button.dataset.viewButton);
-  });
+  button.addEventListener("click", () => showView(button.dataset.viewButton));
 });
 
 if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
-  });
+  menuToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
 }
 
 function openWhatsapp(message) {
@@ -72,16 +69,20 @@ function openWhatsapp(message) {
   window.open(url, "_blank");
 }
 
+function buildSimpleInquiry(service) {
+  return `مرحبًا، وصلت من موقع لنا الأصفر وأريد الاستفسار عن خدمة: ${service}`;
+}
+
 document.getElementById("whatsappFloat")?.addEventListener("click", () => {
-  openWhatsapp("مرحبًا، وصلت إلى لنا الأصفر من خلال الموقع الإلكتروني وأريد الاستفسار عن الخدمات وحجز موعد.");
+  openWhatsapp("مرحبًا، وصلت من موقع لنا الأصفر وأريد الاستفسار عن الخدمات وحجز موعد.");
 });
 
 document.getElementById("directWhatsapp")?.addEventListener("click", () => {
-  openWhatsapp("مرحبًا، وصلت إلى لنا الأصفر من خلال الموقع الإلكتروني وأريد حجز موعد.");
+  openWhatsapp("مرحبًا، وصلت من موقع لنا الأصفر وأريد حجز موعد.");
 });
 
 document.getElementById("contactWhatsapp")?.addEventListener("click", () => {
-  openWhatsapp("مرحبًا، وصلت إلى لنا الأصفر من خلال الموقع الإلكتروني وأريد التواصل بخصوص الخدمات والعروض.");
+  openWhatsapp("مرحبًا، وصلت من موقع لنا الأصفر وأريد التواصل بخصوص الخدمات والعروض.");
 });
 
 document.querySelectorAll("[data-book-service]").forEach(button => {
@@ -95,7 +96,21 @@ document.querySelectorAll("[data-book-service]").forEach(button => {
   });
 });
 
-const bookingForm = document.getElementById("bookingForm");
+document.querySelectorAll("[data-service-inquiry]").forEach(button => {
+  button.addEventListener("click", () => {
+    const service = button.dataset.serviceInquiry;
+    openWhatsapp(buildSimpleInquiry(service));
+  });
+});
+
+function getBookingBonus() {
+  return Number(localStorage.getItem("lanaWebsiteBookings") || "0");
+}
+
+function increaseBookingBonus() {
+  const current = getBookingBonus() + 1;
+  localStorage.setItem("lanaWebsiteBookings", String(current));
+}
 
 bookingForm?.addEventListener("submit", event => {
   event.preventDefault();
@@ -111,6 +126,10 @@ bookingForm?.addEventListener("submit", event => {
     alert("يرجى تعبئة جميع الحقول المطلوبة.");
     return;
   }
+
+  increaseBookingBonus();
+  applyTwoHourStats();
+  animateCounters();
 
   const message = `
 حجز جديد من الموقع الرسمي لنا الأصفر 🌐
@@ -129,6 +148,33 @@ bookingForm?.addEventListener("submit", event => {
   openWhatsapp(message);
 });
 
+reviewForm?.addEventListener("submit", event => {
+  event.preventDefault();
+
+  const name = document.getElementById("reviewName").value.trim();
+  const service = document.getElementById("reviewService").value;
+  const reviewText = document.getElementById("reviewText").value.trim();
+  const rating = document.querySelector('input[name="rating"]:checked')?.value;
+
+  if (!name || !service || !reviewText || !rating) {
+    alert("يرجى تعبئة جميع حقول التقييم.");
+    return;
+  }
+
+  const stars = "⭐".repeat(Number(rating));
+  const message = `
+تقييم جديد من الموقع الرسمي لنا الأصفر 🌐
+
+الاسم: ${name}
+الخدمة: ${service}
+التقييم: ${stars}
+التجربة:
+${reviewText}
+`.trim();
+
+  openWhatsapp(message);
+});
+
 function applyTwoHourStats() {
   const now = new Date();
   const twoHourBlock = Math.floor(now.getTime() / (1000 * 60 * 60 * 2));
@@ -138,17 +184,18 @@ function applyTwoHourStats() {
     return Math.floor(min + (value % (max - min + 1)));
   }
 
+  const bookingBonus = getBookingBonus();
+
   const stats = [
     { value: blockNumber(22, 29, 1) },
     { value: blockNumber(12, 18, 2) },
     { value: 6 },
     { value: blockNumber(2, 6, 3) },
     { value: blockNumber(190, 260, 4) },
-    { value: blockNumber(3, 8, 5) }
+    { value: blockNumber(3, 8, 5) + bookingBonus }
   ];
 
   const counters = document.querySelectorAll("[data-count]");
-
   counters.forEach((counter, index) => {
     if (stats[index]) {
       counter.dataset.count = stats[index].value;
@@ -160,7 +207,6 @@ function applyTwoHourStats() {
 
 function animateCounters() {
   const counters = document.querySelectorAll("[data-count]");
-
   counters.forEach(counter => {
     if (counter.dataset.done === "true") return;
 
@@ -204,18 +250,14 @@ function closeLightbox() {
 }
 
 lightboxClose?.addEventListener("click", closeLightbox);
-
 lightbox?.addEventListener("click", event => {
   if (event.target === lightbox) closeLightbox();
 });
-
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") closeLightbox();
 });
 
-let musicStarted = false;
-
-async function startMusicOnFirstTouch() {
+async function startMusicOnce() {
   if (!siteMusic || musicStarted) return;
 
   try {
@@ -223,25 +265,22 @@ async function startMusicOnFirstTouch() {
     await siteMusic.play();
     musicStarted = true;
   } catch (error) {
-    // إذا المتصفح منع الصوت، سيحاول مرة أخرى مع اللمسة التالية
+    // Will retry on the next interaction.
   }
 }
 
 function pauseMusicWhenLeaving() {
   if (!siteMusic) return;
-
   if (document.hidden) {
     siteMusic.pause();
     musicStarted = false;
   }
 }
 
-document.addEventListener("pointerdown", startMusicOnFirstTouch);
-document.addEventListener("touchstart", startMusicOnFirstTouch);
-document.addEventListener("click", startMusicOnFirstTouch);
-
+document.addEventListener("pointerdown", startMusicOnce);
+document.addEventListener("touchstart", startMusicOnce);
+document.addEventListener("click", startMusicOnce);
 document.addEventListener("visibilitychange", pauseMusicWhenLeaving);
-
 window.addEventListener("pagehide", () => {
   if (siteMusic) {
     siteMusic.pause();
@@ -253,24 +292,20 @@ function revealVisible() {
   const reveals = document.querySelectorAll(".reveal");
   reveals.forEach(el => {
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 80) {
-      el.classList.add("visible");
-    }
+    if (rect.top < window.innerHeight - 80) el.classList.add("visible");
   });
 }
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
+    if (entry.isIntersecting) entry.target.classList.add("visible");
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 window.addEventListener("scroll", revealVisible);
 
 applyTwoHourStats();
 const initialView = window.location.hash ? window.location.hash.replace("#", "") : "home";
-showView(initialView, false);
-if (initialView === "home") animateCounters();
+showView(document.getElementById(initialView) ? initialView : "home", false);
+if ((document.getElementById(initialView) ? initialView : "home") === "home") animateCounters();
